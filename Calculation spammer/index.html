@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stupid HTML things</title>
     <style>
-        body, html {
+        body,
+        html {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
@@ -62,6 +64,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="sidebar">
@@ -79,7 +82,7 @@
         <div class="content">
             <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
             <div class="deathButton"><button onclick="toggle()">Click to Toggle DEATH!</button></div>
-            <div class="ScrollContainterText"><p>Output will appear below</p></div>
+            <div class="ScrollContainerText"><p>Output will appear below</p></div>
             <div class="scrollContainer"><div class="outputBox"></div></div>
         </div>
     </div>
@@ -90,20 +93,20 @@
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
-
         }
         function toggle(){
-            State = not State
+            State = !State; // Fixed the toggle function
         }
         function check(){
-          if (State){
+            if (State){
                 var z = e*e/e+e*e*e*e+1
-                var outputBox = document.getElementById("outputBox");
+                var outputBox = document.querySelector(".outputBox"); // Corrected selector
                 outputBox.innerHTML += z + "<br>";
-                var scrollContainer = document.getElementById("scrollContainer");
+                var scrollContainer = document.querySelector(".scrollContainer"); // Corrected selector
                 scrollContainer.scrollTop = scrollContainer.scrollHeight;
-          }
-      }
+            }
+        }
     </script>
 </body>
+
 </html>
