@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stupid HTML things</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            left: -250px;
+            transition: 0.3s;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .close-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            padding-top: 20px;
+        }
+
+        .menu li {
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        .hamburger-menu {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+                <h2>Sidebar</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="https://volatilecobra77.github.io/Stupid-HTML-Stuff/">Home</a></li>
+                <li><a href="https://volatilecobra77.github.io/Stupid-HTML-Stuff/Web%20tab%20opener/">New Tab Spammer</a></li>
+                <li><a href="https://volatilecobra77.github.io/Stupid-HTML-Stuff/Calculation20%Spammer/">Calculation Spammer</a></li>
+                <li><a href="https://volatilecobra77.github.io/Stupid-HTML-Stuff/Other20%Stuff/">Stuff we did not make</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+            <div class="deathButton"><button onclick="toggle()">Click to Toggle DEATH!</button></div>
+            <div class="ScrollContainterText"><p>Output will appear below</p></div>
+            <div class="scrollContainer"><div class="outputBox"></div></div>
+        </div>
+    </div>
+
+    <script>
+        let e = 0
+        let State = false
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+
+        }
+        function toggle(){
+            State = not State
+        }
+        function check(){
+          if (State){
+                var z = e*e/e+e*e*e*e+1
+                var outputBox = document.getElementById("outputBox");
+                outputBox.innerHTML += z + "<br>";
+                var scrollContainer = document.getElementById("scrollContainer");
+                scrollContainer.scrollTop = scrollContainer.scrollHeight;
+          }
+      }
+    </script>
+</body>
+</html>
