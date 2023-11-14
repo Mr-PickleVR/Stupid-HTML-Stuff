@@ -103,24 +103,6 @@
             State = !State; // Fixed the toggle function
         }
     </script>
-    <script>
-        let uwu = 0;
-        let State = false
-        var array = []
-        function check(){
-            console.log("Ran check")
-            while (State){
-                uwu++;
-                var z = uwu/uwu/uwu*7*uwu/uwu/uwu/uwu/uwu/uwu*uwu*uwu*uwu/uwu
-                console.log(z);
-                var outputBox = document.querySelector(".outputBox"); // Corrected selector
-                outputBox.innerHTML += z + "<br>";
-                var scrollContainer = document.querySelector(".scrollContainer"); // Corrected selector
-                scrollContainer.scrollTop = scrollContainer.scrollHeight;
-            }
-        }
-            setInterval(check, 10)
-    </script>
 </body>
 
 </html>
