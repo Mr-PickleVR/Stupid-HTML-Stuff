@@ -3,38 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DO NOT CLICK</title>
+    <title>Stupid HTML things</title>
     <style>
-	.button {
-            background-color: green; /* Slightly darker red */
-            border: none;
-            color: #1b5e20;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-
-        .button:hover {
-            background-color: red; /* Even darker red on hover */
-            color: #b71c1c;
-            border: 2px solid white;
-        }
-	.main {
-           display: flex;
-           justify-content: center;
-    	   align-items: center;
-	   height: 80vh;
-	   margin:0;
-	}
         body, html {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
-		background-color:black;
+            background-color: black;
         }
 
         .container {
@@ -71,28 +46,42 @@
             padding-top: 20px;
         }
 
-        .menu li {
-            padding: 15px 20px;
-            cursor: pointer;
-        }
-        
         .menuLink {
             padding-left: 20px;
             text-decoration: none;
             transition:100ms;
             color: white;
+            size: 20px;
         }
 
         .menuLink:hover{
             color:red;
+            size:18px;
         }
-
         .content {
             flex-grow: 1;
             padding: 20px;
             transition: margin-left 0.3s;
+            color: white;
+            text-decoration: none;
         }
+        .content a {
+            text-decoration: none;
+            color: white;
+            transition: 100ms;
 
+        }
+        .content .MainA:hover{
+            color: red;
+            text-decoration: underline;
+
+        }
+        .content iframe{
+            display: flex;
+            width: auto;
+            height: auto;
+
+        }
         .hamburger-menu {
             font-size: 30px;
             cursor: pointer;
@@ -104,7 +93,7 @@
         <div class="sidebar">
             <div class="sidebar-header">
                 <span class="close-btn" onclick="toggleSidebar()">&times;</span>
-                <h2>Sidebar</h2>
+                <h2>Welcome</h2>
             </div>
             <ul class="menu">
                 <li><a class="menuLink" href="https://www.mrpickle.ca/">Home</a></li>
@@ -117,20 +106,13 @@
             </ul>
         </div>
         <div class="content">
-            <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
-<div class="main"><button onclick="OPEN()" class="button">DO NOT CLICK</button></div>
-<script>
-    const searchParams = new URLSearchParams(window.location.search);
-    var mode = searchParams.get("darkMode")
-    const body = document.getElementById("body");
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    if (mode == "True"){
-        body.backgroundColor = 'black';
-        hamburgerMenu.color = 'white';
-    }
-	function OPEN(){
-		window.open("./forkbomb.html", "HAHA FORKBOMBED!", 'width="600",height="600"');
-	}
+            <div class="hamburger-menu"><a onclick="toggleSidebar()">&#9776;</a></div>
+                <h1 class="MainHead">Origional Found <a class="MainA" href="https://sandtris.com">HERE</a></div>
+                <iframe src="https://sandtris.com", width="100%", height="100%">Sand Tetris</iframe>
+        </div>
+    </div>
+
+    <script>
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';

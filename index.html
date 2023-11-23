@@ -52,7 +52,31 @@
             color: white;
             size: 20px;
         }
+        .SubMenu {
+            display: none;
+            font-size: 15px;
+        }
 
+        .menuLink:hover + .SubMenu,
+        .SubMenu:hover {
+            display: block;
+        }
+
+        .SubMenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            position: absolute;
+        }
+
+        .SubMenu li {
+            padding: 10px;
+            text-align: center;
+        }  
+        
         .menuLink:hover{
             color:red;
             size:18px;
@@ -83,7 +107,12 @@
                 <br>
                 <li><a class="menuLink" href="https://www.mrpickle.ca/Calculation%20spammer/">Calculation Spammer</a></li>
                 <br>
-                <li><a class="menuLink" href="https://www.mrpickle.ca/Other%20Stuff/">Stuff we did not make</a></li>
+                <li><a id = "Dropdown"class="menuLink" href="https://www.mrpickle.ca/Other%20Stuff/">Stuff we did not make</a></li>
+                <li><ul class="SubMenu">
+                    <li><a class="menuLink">Sand Tetris</a></li>
+                    <br>
+                    <li><a class="menuLink">Web GL fluid SIM</a></li>
+                </ul></li>
             </ul>
         </div>
         <div class="content">
