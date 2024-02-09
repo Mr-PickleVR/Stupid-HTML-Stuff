@@ -9,6 +9,7 @@
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: black;
         }
 
         .container {
@@ -90,7 +91,29 @@
         .hamburger-menu {
             font-size: 30px;
             cursor: pointer;
+            color: white;
         }
+        .BUTTON{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 4000px;
+        }
+        .DontTouch{
+            background: green;
+            color: greenyellow;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .DontTouch:hover{
+            background:red;
+            color: firebrick;
+        }
+
     </style>
 </head>
 <body>
@@ -117,8 +140,7 @@
         </div>
         <div class="content">
             <div class="hamburger-menu"><a onclick="toggleSidebar()">&#9776;</a></div>
-            <div class="top"><h1>Welcome to the Stupid HTML stuff site</h1></div>
-            <div class="mid"><h3>Click on one of the following links or the Hamburger menu (&#9776;) to continue</h3></div>
+            <div class="BUTTON"><button class="DontTouch" onClick = "openFB()">Do NOT Click!</button></div>
         </div>
     </div>
 
@@ -127,7 +149,9 @@
             const sidebar = document.querySelector('.sidebar');
             sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
         }
+        function openFB(){
+            window.open('./forkbomb.html', '_blank', 'width=600,height=400')
+        }
     </script>
 </body>
 </html>
-
