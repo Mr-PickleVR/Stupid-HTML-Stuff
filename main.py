@@ -1,4 +1,4 @@
 from pyscript import document
 
-doc = document.getElementBtId("output")
-doc.innerText = "Hello World"
+out = document.querySelector("#output")
+out.innerText = "Hello world"
