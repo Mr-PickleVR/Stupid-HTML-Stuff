@@ -102,7 +102,7 @@
         </div>
         <div class="content">
             <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
-            <div class="deathButton"><button onclick="toggle()">Click to Toggle DEATH!</button></div>
+            <div class="deathButton"><button onclick="toggle()">Click to Toggle</button></div>
             <div class="ScrollContainerText"><p>Output will appear below</p></div>
             <div class="scrollContainer"><div class="outputBox"></div>Some Text <br></div></div>
         </div>
@@ -115,6 +115,9 @@
         function toggle(){
             console.log("clicked")
             State = !State; // Fixed the toggle function
+            if (State){
+                console.log("ON")
+            }
         }
     </script>
 </body>
